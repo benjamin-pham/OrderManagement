@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{398F4588-A418-48BE-A005-EFDDA738CD04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C1AC2E7C-9E1A-4AE5-B98F-59CA895E39AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Domain", "src\OrderManagement.Domain\OrderManagement.Domain.csproj", "{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Application", "src\OrderManagement.Application\OrderManagement.Application.csproj", "{895F5B2C-3326-47A3-B859-26B98FB559AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Infrastructure", "src\OrderManagement.Infrastructure\OrderManagement.Infrastructure.csproj", "{CA7B2275-0396-4699-9647-F284E746D822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.API", "src\OrderManagement.API\OrderManagement.API.csproj", "{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{59FF4C7F-C3BF-4661-B2F9-B58A1BF22AB8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{895F5B2C-3326-47A3-B859-26B98FB559AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895F5B2C-3326-47A3-B859-26B98FB559AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895F5B2C-3326-47A3-B859-26B98FB559AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895F5B2C-3326-47A3-B859-26B98FB559AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7B2275-0396-4699-9647-F284E746D822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7B2275-0396-4699-9647-F284E746D822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7B2275-0396-4699-9647-F284E746D822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7B2275-0396-4699-9647-F284E746D822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73AC9D8F-FD8F-48BB-BC01-28E30325D3DD} = {398F4588-A418-48BE-A005-EFDDA738CD04}
+		{895F5B2C-3326-47A3-B859-26B98FB559AC} = {398F4588-A418-48BE-A005-EFDDA738CD04}
+		{CA7B2275-0396-4699-9647-F284E746D822} = {398F4588-A418-48BE-A005-EFDDA738CD04}
+		{8E97A1D3-B4DD-4EFF-891D-D8C15C1D6256} = {398F4588-A418-48BE-A005-EFDDA738CD04}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+    database:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        container_name: OrderManagement.Database
+        environment:
+            SA_PASSWORD: "Passw0rd@!"
+            ACCEPT_EULA: "Y"
+        restart: always
+        volumes:
+            - order_management_database:/var/lib/sqlserver/data
+        ports:
+            - "1434:1433"
+        networks:
+            - local
+
+    logging:
+        image: datalust/seq:2024.3
+        container_name: OrderManagement.Logging
+        environment:
+            - ACCEPT_EULA=Y
+        ports:
+            - 5341:5341
+            - 8081:80
+        networks:
+          - local
+
+volumes:
+    order_management_database:
+        driver: local
+
+networks:
+  local:
+    name: local
+    driver: bridge
