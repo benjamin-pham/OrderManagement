@@ -15,6 +15,7 @@ dotnet ef migrations add YourMigration --project src/OrderManagement.Infrastruct
 dotnet ef migrations update --project src/OrderManagement.Infrastructure --startup-project src/OrderManagement.API
 ```
 copy the contents from the scripts.sql file and execute it into the database
+Run the project
 ```Powershell
 dotnet build
 ```
