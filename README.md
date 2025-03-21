@@ -22,6 +22,9 @@ copy the contents from the scripts.sql file and execute it into the database
 ## Swagger document
 http://localhost:5117/swagger/index.html
 
+## Logging
+http://localhost:8081
+
 ## Useful commands:
 - dotnet watch run --environment "Development"
 - dotnet restore
