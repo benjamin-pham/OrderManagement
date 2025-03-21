@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
-using OrderManagement.Application.Exceptions;
+using OrderManagement.Domain.Exceptions;
 using System.Windows.Input;
 
 namespace OrderManagement.Application.Abstractions.Behaviors;

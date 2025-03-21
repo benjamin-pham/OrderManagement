@@ -3,13 +3,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OrderManagement.Application.Abstractions.Clock;
 using OrderManagement.Domain.Abstractions;
+using OrderManagement.Domain.Orders;
 using OrderManagement.Infrastructure.Clock;
 using OrderManagement.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OrderManagement.Infrastructure.ReadRepository;
+using OrderManagement.Infrastructure.Repositories;
 
 namespace OrderManagement.Infrastructure;
 
@@ -21,10 +19,13 @@ public static class DependencyInjection
 
         string connectionString = configuration.GetConnectionString("Database")!;
 
-        services.AddDbContext<ApplicationDbContext>(options =>
+        services.AddScoped<AuditInterceptor>();
+
+        services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
         {
-            options.UseSqlServer(connectionString);
-        });
+            options.UseSqlServer(connectionString)
+                .AddInterceptors(serviceProvider.GetRequiredService<AuditInterceptor>());
+        }).AddLogging();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
@@ -37,6 +38,8 @@ public static class DependencyInjection
 
     private static void AddRepository(IServiceCollection services)
     {
-
+        services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+        services.AddScoped<IOrderReadRepository, OrderReadRepository>();
     }
 }

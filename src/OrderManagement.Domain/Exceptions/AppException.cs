@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace OrderManagement.Application.Exceptions;
+namespace OrderManagement.Domain.Exceptions;
 
 public class AppException : Exception
 {
