@@ -66,7 +66,7 @@ public class OrdersController : ControllerBase
     }
 
     /// <summary>
-    /// update order
+    /// remove order
     /// </summary>
     /// <param name="id">order id</param>
     /// <returns>order updated</returns>
